@@ -1,0 +1,4 @@
+db.url=jdbc:postgresql://localhost:5432/papeleria_campus
+db.usuario=postgres
+db.clave=123456789_00
+

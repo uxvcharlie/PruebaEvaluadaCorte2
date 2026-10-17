@@ -87,6 +87,7 @@
          <children>
             <Button fx:id="btnBuscar" mnemonicParsing="false" text="Buscar" />
             <Button fx:id="btnLimpiarFiltros" mnemonicParsing="false" text="Limpiar filtros" />
+            <Button mnemonicParsing="false" text="Recargar" />
          </children>
       </HBox>
       <TableView fx:id="tblProducto" prefHeight="200.0" prefWidth="200.0">

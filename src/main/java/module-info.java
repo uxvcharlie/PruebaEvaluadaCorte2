@@ -4,5 +4,6 @@ module com.example.practicaevaluadacorte2 {
 
 
     opens com.example.practicaevaluadacorte2 to javafx.fxml;
+    opens com.example.practicaevaluadacorte2.controller to javafx.fxml;
     exports com.example.practicaevaluadacorte2;
 }

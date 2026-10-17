@@ -37,3 +37,6 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### Credenciales de la base de datos Postgresql ###
+db.properties

@@ -176,7 +176,7 @@ public class ProductosController {
              * si falla la conexion NO se muestra con 0 registros, porque parecería una búsqueda que salió bien y no encontró nada
              * */
             productos.clear();
-            lblContador.setText("Registros visibles: - error al consultar la base de datos");
+            lblContador.setText("Registros visibles: - error al consultar la base de datos.");
             mostrarErrorBaseDatos("No se pudieron cargar los productos.", e);
             return false;
         }

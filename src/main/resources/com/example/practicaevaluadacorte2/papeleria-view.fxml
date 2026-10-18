@@ -102,5 +102,6 @@
                 <TableColumn fx:id="colStock" prefWidth="141.0" text="Stock" />
             </columns>
         </TableView>
+        <Label fx:id="lblContador" text="Registros visibles: 0" />
     </children>
 </VBox>

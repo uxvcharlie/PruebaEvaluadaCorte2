@@ -66,6 +66,9 @@ public class ProductosController {
     @FXML
     private TableColumn<Producto, Integer> colStock;
 
+    @FXML
+    private Label lblContador;
+
 
     /*Observable list*/
     private final ObservableList<Producto> productos = FXCollections.observableArrayList();
@@ -166,12 +169,14 @@ public class ProductosController {
 
         try {
             productos.setAll(productoDAO.buscar(texto, categoria, chkSoloExistencia.isSelected()));
+            lblContador.setText("Registros visibles: " + productos.size());
             return true;
         } catch (DatosException e) {
             /*
              * si falla la conexion NO se muestra con 0 registros, porque parecería una búsqueda que salió bien y no encontró nada
              * */
             productos.clear();
+            lblContador.setText("Registros visibles: - error al consultar la base de datos");
             mostrarErrorBaseDatos("No se pudieron cargar los productos.", e);
             return false;
         }

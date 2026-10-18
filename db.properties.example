@@ -1,4 +1,5 @@
-db.url=jdbc:postgresql://localhost:5432/papeleria_campus
+# Configuracion de prueba para E1: el puerto 5439 esta MAL a proposito.
+# Se usa con la opcion de VM -Ddb.conf=db-prueba-e1.properties
+db.url=jdbc:postgresql://localhost:5439/papeleria_campus
 db.usuario=postgres
-db.clave=123456789_00
-
+db.contra=no-es-la-real

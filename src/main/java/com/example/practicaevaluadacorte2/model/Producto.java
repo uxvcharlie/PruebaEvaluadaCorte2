@@ -5,7 +5,7 @@ public class Producto {
         this.idProducto = idProducto;
         this.codigo = codigo;
         this.nombre = nombre;
-        Categoria = categoria;
+        this.categoria = categoria;
         this.precio = precio;
         this.stock = stock;
     }
@@ -38,11 +38,11 @@ public class Producto {
     }
 
     public String getCategoria() {
-        return Categoria;
+        return categoria;
     }
 
     public void setCategoria(String categoria) {
-        Categoria = categoria;
+        this.categoria = categoria;
     }
 
     public Double getPrecio() {
@@ -61,10 +61,15 @@ public class Producto {
         this.stock = stock;
     }
 
+    @Override
+    public String toString() {
+        return codigo + " - " + nombre;
+    }
+
     private int idProducto;
     private String codigo;
     private String nombre;
-    private String Categoria;
+    private String categoria;
     private Double precio;
     private int stock;
 }

@@ -64,9 +64,8 @@ public class ProductoDAO {
     }
 
     /*
-     * Verifica si el codigo ya pertenece a otro producto (V9).
-     * @param idProductoExcluir, es el id del producto que se esta actualizando
-     * para no compararlo consigo mismo. Al guardar uno nuevo se envia null
+     * Verifica si el codigo ya pertenece a otro producto (V9). @param idProductoExcluir, es el id del producto que se esta actualizando
+     * para no compararlo consigo mismo. Al guardar uno nuevo se envia un null
      * */
     public boolean existeCodigo(String codigo, Integer idProductoExcluir) throws DatosException {
         String sql = "SELECT COUNT(*) FROM catalogo.producto WHERE codigo = ?";
@@ -145,7 +144,6 @@ public class ProductoDAO {
         switch (sqlState) {
             case "28P01":
             case "28000":
-
 
                 return "PostgreSQL rechazó el usuario o la contraseña de db.properties.";
             case "3D000":

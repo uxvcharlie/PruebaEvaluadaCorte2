@@ -16,89 +16,91 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="716.0" prefWidth="728.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/26" fx:controller="com.example.practicaevaluadacorte2.HelloController">
+<VBox prefHeight="716.0" prefWidth="728.0" spacing="20.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practicaevaluadacorte2.controller.ProductosController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-   <children>
-      <Label text="Gestion de papeleria">
-         <font>
-            <Font name="JetBrainsMono NF Regular" size="28.0" />
-         </font>
-      </Label>
-      <GridPane>
-        <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <Label text="Codigo" />
-            <Label text="Categoria" GridPane.rowIndex="1" />
-            <Label text="Precio" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Label text="Nombre" GridPane.columnIndex="2" />
-            <ComboBox fx:id="cmbCategoria" prefHeight="26.0" prefWidth="175.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label text="Stock" GridPane.rowIndex="2" />
-            <TextField fx:id="txtCodigo" GridPane.columnIndex="1" />
-            <TextField fx:id="txtNombre" GridPane.columnIndex="3" />
-            <TextField fx:id="txtStock" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField fx:id="txtPrecio" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-         </children>
-      </GridPane>
-      <HBox alignment="CENTER" prefHeight="43.0" prefWidth="688.0" spacing="20.0">
-         <children>
-            <Button fx:id="btnGuardar" mnemonicParsing="false" text="Guardar" />
-            <Button fx:id="btnActualizar" mnemonicParsing="false" text="Actualizar" />
-            <Button fx:id="btnEliminar" mnemonicParsing="false" text="Eliminar" />
-            <Button fx:id="btnLimpiar" mnemonicParsing="false" text="Limpiar" />
-         </children>
-      </HBox>
-      <Separator prefWidth="200.0" />
-      <Label text="Busqueda">
-         <font>
-            <Font name="JetBrainsMono NF Regular" size="26.0" />
-         </font>
-      </Label>
-      <GridPane>
-        <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <Label text="Codigo o nombre" />
-            <Label text="Categoria" GridPane.columnIndex="2" />
-            <ComboBox fx:id="cmbCategoriaFiltro" prefWidth="150.0" GridPane.columnIndex="3" />
-            <TextField fx:id="txtBusqueda" GridPane.columnIndex="1" />
-         </children>
-      </GridPane>
-      <CheckBox fx:id="chkSoloExistencia" mnemonicParsing="false" text="Solo existencia" />
-      <HBox alignment="CENTER" prefHeight="57.0" prefWidth="688.0" spacing="20.0">
-         <children>
-            <Button fx:id="btnBuscar" mnemonicParsing="false" text="Buscar" />
-            <Button fx:id="btnLimpiarFiltros" mnemonicParsing="false" text="Limpiar filtros" />
-            <Button mnemonicParsing="false" text="Recargar" />
-         </children>
-      </HBox>
-      <TableView fx:id="tblProducto" prefHeight="200.0" prefWidth="200.0">
-        <columns>
-          <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
-          <TableColumn fx:id="colCodigo" prefWidth="116.0" text="Codigo" />
-            <TableColumn fx:id="colNombre" prefWidth="104.0" text="Nombre" />
-            <TableColumn fx:id="colCategoria" prefWidth="140.0" text="Categoria" />
-            <TableColumn fx:id="colPrecio" prefWidth="111.0" text="Precio" />
-            <TableColumn fx:id="colStock" prefWidth="141.0" text="Stock" />
-        </columns>
-      </TableView>
-   </children>
+    <children>
+        <Label text="Gestion de papeleria">
+            <font>
+                <Font name="JetBrainsMono NF Regular" size="28.0" />
+            </font>
+        </Label>
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Codigo" />
+                <Label text="Categoria" GridPane.rowIndex="1" />
+                <Label text="Precio" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <Label text="Nombre" GridPane.columnIndex="2" />
+                <ComboBox fx:id="cmbCategoria" prefHeight="26.0" prefWidth="175.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label text="Stock" GridPane.rowIndex="2" />
+                <TextField fx:id="txtCodigo" GridPane.columnIndex="1" />
+                <TextField fx:id="txtNombre" GridPane.columnIndex="3" />
+                <TextField fx:id="txtStock" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField fx:id="txtPrecio" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                <Label text="ID" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <TextField fx:id="txtId" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            </children>
+        </GridPane>
+        <HBox alignment="CENTER" prefHeight="43.0" prefWidth="688.0" spacing="20.0">
+            <children>
+                <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#guardar" text="Guardar" />
+                <Button fx:id="btnActualizar" mnemonicParsing="false" onAction="#actualizar" text="Actualizar" />
+                <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminar" text="Eliminar" />
+                <Button fx:id="btnLimpiar" mnemonicParsing="false" onAction="#nuevo" text="Nuevo / Limpiar formulario" />
+            </children>
+        </HBox>
+        <Separator prefWidth="200.0" />
+        <Label text="Busqueda">
+            <font>
+                <Font name="JetBrainsMono NF Regular" size="26.0" />
+            </font>
+        </Label>
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Codigo o nombre" />
+                <Label text="Categoria" GridPane.columnIndex="2" />
+                <ComboBox fx:id="cmbCategoriaFiltro" prefWidth="150.0" GridPane.columnIndex="3" />
+                <TextField fx:id="txtBusqueda" onAction="#buscarProductos" GridPane.columnIndex="1" />
+            </children>
+        </GridPane>
+        <CheckBox fx:id="chkSoloExistencia" mnemonicParsing="false" text="Solo con existencias" />
+        <HBox alignment="CENTER" prefHeight="57.0" prefWidth="688.0" spacing="20.0">
+            <children>
+                <Button fx:id="btnBuscar" mnemonicParsing="false" onAction="#buscarProductos" text="Buscar" />
+                <Button fx:id="btnLimpiarFiltros" mnemonicParsing="false" onAction="#limpiar" text="Limpiar filtros" />
+                <Button fx:id="btnRecargar" mnemonicParsing="false" onAction="#recargar" text="Recargar" />
+            </children>
+        </HBox>
+        <TableView fx:id="tblProducto" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="colCodigo" prefWidth="116.0" text="Codigo" />
+                <TableColumn fx:id="colNombre" prefWidth="104.0" text="Nombre" />
+                <TableColumn fx:id="colCategoria" prefWidth="140.0" text="Categoria" />
+                <TableColumn fx:id="colPrecio" prefWidth="111.0" text="Precio" />
+                <TableColumn fx:id="colStock" prefWidth="141.0" text="Stock" />
+            </columns>
+        </TableView>
+    </children>
 </VBox>
